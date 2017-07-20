@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 系统用户表
  */
-@TableName("order")
+@TableName("bid")
 public class Order implements Serializable {
 
     private Integer id;
