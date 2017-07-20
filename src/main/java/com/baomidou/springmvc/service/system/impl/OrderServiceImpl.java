@@ -23,4 +23,10 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         DbContextHolder.setDbType(DBSourceEnum.SOURCE_ORDER);
         return selectList(null);
     }
+
+    @Override
+    public void insertBid() {
+        DbContextHolder.setDbType(DBSourceEnum.SOURCE_ORDER);
+        baseMapper.insertBid();
+    }
 }

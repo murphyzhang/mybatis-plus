@@ -13,4 +13,6 @@ import java.util.List;
 public interface IOrderService extends IService<Order> {
 
     public List<Order> getOrderList();
+
+    public void insertBid();
 }

@@ -9,5 +9,5 @@ import com.baomidou.springmvc.model.system.Order;
  *
  */
 public interface OrderMapper extends SuperMapper<Order> {
-    public void test();
+    public void insertBid();
 }

@@ -7,4 +7,8 @@
 		id, orderNum
 	</sql>
 
+	<insert id="insertBid">
+		insert into bid(orderNum, orderType) values('2017000000', 3)
+	</insert>
+
 </mapper>

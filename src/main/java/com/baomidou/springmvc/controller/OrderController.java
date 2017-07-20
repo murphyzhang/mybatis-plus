@@ -34,6 +34,9 @@ public class OrderController extends BaseController {
     public ModelAndView indexV2(ModelAndView modelAndView) {
         modelAndView.setViewName("order_index");
         DbContextHolder.setDbType(DBSourceEnum.SOURCE_ORDER);
+
+        orderService.insertBid();
+
         modelAndView.addObject("orderList", orderService.selectList(null));
         return modelAndView;
     }

@@ -10,5 +10,6 @@ import com.baomidou.springmvc.model.system.User;
  */
 public interface IUserService extends IService<User> {
 
-
+    public void insertUser();
+    public void insertUser2();
 }

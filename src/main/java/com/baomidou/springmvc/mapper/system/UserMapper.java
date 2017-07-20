@@ -10,5 +10,5 @@ import com.baomidou.springmvc.model.system.User;
  */
 public interface UserMapper extends SuperMapper<User> {
 
-
+    public void insertUser();
 }

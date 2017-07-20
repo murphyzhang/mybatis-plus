@@ -45,6 +45,7 @@ public class UserController extends BaseController {
     public ModelAndView index(ModelAndView modelAndView) {
         modelAndView.setViewName("index");
         DbContextHolder.setDbType(DBSourceEnum.SOURCE_MP);
+        userService.insertUser();
         modelAndView.addObject("userList", userService.selectList(null));
         return modelAndView;
     }
