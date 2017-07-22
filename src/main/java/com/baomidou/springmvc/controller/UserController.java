@@ -1,16 +1,13 @@
 package com.baomidou.springmvc.controller;
 
-import com.baomidou.springmvc.platform.constant.DBSourceEnum;
-import com.baomidou.springmvc.platform.jdbc.DbContextHolder;
+import com.baomidou.springmvc.model.system.User;
+import com.baomidou.springmvc.service.system.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.baomidou.springmvc.model.system.User;
-import com.baomidou.springmvc.service.system.IUserService;
 
 /**
  * Author: D.Yang
@@ -44,8 +41,7 @@ public class UserController extends BaseController {
     @RequestMapping("/")
     public ModelAndView index(ModelAndView modelAndView) {
         modelAndView.setViewName("index");
-        DbContextHolder.setDbType(DBSourceEnum.SOURCE_MP);
-        userService.insertUser();
+        //userService.insertUser();
         modelAndView.addObject("userList", userService.selectList(null));
         return modelAndView;
     }

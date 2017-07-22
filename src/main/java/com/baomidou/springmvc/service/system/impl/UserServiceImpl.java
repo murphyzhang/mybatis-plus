@@ -1,6 +1,5 @@
 package com.baomidou.springmvc.service.system.impl;
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.baomidou.springmvc.mapper.system.UserMapper;
 import com.baomidou.springmvc.model.system.User;
 import com.baomidou.springmvc.service.system.IUserService;
@@ -14,7 +13,7 @@ import java.util.Date;
  *
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class UserServiceImpl extends BaseMybatisServiceImpl<UserMapper, User> implements IUserService {
 
 
     @Override

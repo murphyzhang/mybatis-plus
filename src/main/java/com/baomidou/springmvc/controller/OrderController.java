@@ -1,7 +1,5 @@
 package com.baomidou.springmvc.controller;
 
-import com.baomidou.springmvc.platform.constant.DBSourceEnum;
-import com.baomidou.springmvc.platform.jdbc.DbContextHolder;
 import com.baomidou.springmvc.service.system.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,13 +28,17 @@ public class OrderController extends BaseController {
         this.orderService = orderService;
     }
 
+    /*private OrderServiceImpl orderService;
+
+    @Autowired
+    public void setOrderService(OrderServiceImpl orderService) {
+        this.orderService = orderService;
+    }*/
+
     @RequestMapping("/order/index")
     public ModelAndView indexV2(ModelAndView modelAndView) {
         modelAndView.setViewName("order_index");
-        DbContextHolder.setDbType(DBSourceEnum.SOURCE_ORDER);
-
-        orderService.insertBid();
-
+        //orderService.insertBid();
         modelAndView.addObject("orderList", orderService.selectList(null));
         return modelAndView;
     }
